@@ -1,0 +1,103 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background: url("{% static 'bg.png' %}");
+			}
+			.container-fluid {padding: 25px;}
+			.container{background-color:white;padding: 50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: Georgia, 'Times New Roman', Times, serif;
+
+			}
+		.style1 {color: #030303}
+        .style4 {color: #0a0a0a; font-weight: bold; }
+        .style5 {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	color: #020202;
+	font-weight: bolder;
+	background-color: rgba(219, 233, 233, 0.7);
+	border-radius: 08px;
+}
+.login{
+	padding: 10px;
+	border: 2px;
+	border-radius: 08px;
+	text-align: center;
+	margin-left:600px;
+	margin-right:10px;
+}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div >
+			<h2 class="style1 text-center" id="title"><strong>Fake Profile Identification in Social Network using Machine Learning and NLP
+
+</strong></h2>
+			 <p class="text-center">
+				<span class="style4"><small id="passwordHelpInline"> "The Crab your hear about me might be true "
+
+ </small></span> </p>
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center">&nbsp;</p>
+					  </fieldset>
+					</form>
+				</div>
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+						<div class ="login">
+							<fieldset>
+                             {% load static %}
+						<img src="{% static '/login1.png' %}" alt="My image">
+							<p class="style1"> Login  </p>
+
+							<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="sign_in">
+							</div></br>
+							<div class="style5">
+							Are you admin : <a href="{% url 'serviceproviderlogin' %}">SERVICE PROVIDER</a><br>
+                                Registration : <a href="{% url 'Register1' %}">REGISTER</a>
+								<br><a href="">Forgot Password</a>
+ 							</div>
+ 						</fieldset>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>
